@@ -7,5 +7,9 @@ class Post extends AppModel {
 		'body' => array('notEmpty'),
 	);
 
+	public function modifySended($id) {
+		$this->id = $id;
+		return $this->saveField('sended', date('Y-m-d H:i:s'));
+	}
 }
 ?>
