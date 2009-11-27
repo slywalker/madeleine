@@ -75,9 +75,12 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function cancel() {
-		if ($this->data) {
+		if (!empty($this->data['User']['email'])) {
+			$conditions = array('User.email' => $this->data['User']['email']);
+			$user = $this->User->find('first', compact('conditions'));
 			$this->User->begin();
-			if ($user = $this->User->cancel($this->data['User']['email'])) {
+			if ($user && $_user = $this->User->cancel($user['User']['id'])) {
+				$user = Set::merge($user, $_user);
 				// sendmail
 				$this->set(compact('user'));
 				if ($this->_send($user['User']['email'], __('Confirm Cancel', true), 'confirm_cancel')) {
@@ -112,10 +115,11 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function confirm_cancel($emailCheckcode = null) {
-		if ($activation) {
-			$result = $this->User->confirmDelete($emailCheckcode);
-			if ($result) {
+		if ($emailCheckcode) {
+			$email = $this->User->confirmDelete($emailCheckcode);
+			if ($email) {
 				$this->flash(__('Your Email has cancelled', true), array('action' => 'index'));
+				CakeLog::write('cancel', $email);
 				return;
 			}
 		}
@@ -139,7 +143,7 @@ class UsersController extends AppController {
 		}
 		//$this->Qdmail->debug(2);
 		$this->Qdmail->to($to);
-		$this->Qdmail->from('noreplay@'.env('HTTP_HOST'));
+		$this->Qdmail->from($params['from']);
 		$this->Qdmail->subject($subject);
 		
 		$view = $this->view;

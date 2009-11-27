@@ -75,7 +75,7 @@ class User extends AppModel {
 	 * @param string $email 
 	 * @return mixed On success Model::$data if its not empty or true, false on failure
 	 */
-	public function cancel($email) {
+	public function cancel($id) {
 		// 期限切れcancel削除
 		$conditions = array(
 			'NOT' => array($this->alias.'.email_checkcode' => null),
@@ -83,12 +83,11 @@ class User extends AppModel {
 			$this->alias.'.expires <' => date('Y-m-d H:i:s'),
 		);
 		$this->deleteAll($conditions);
-		//id検索
-		$id = $this->field('id', array('email' => $email));
+		// id確認
 		if (!$id) {
 			return false;
 		}
-		// データ追加
+		// データ更新
 		$data = array();
 		$data[$this->alias]['id'] = $id;
 		$data[$this->alias]['email_checkcode'] = String::uuid();
@@ -102,7 +101,7 @@ class User extends AppModel {
 	 * @param string $emailCheckcode 
 	 * @return array Array of records
 	 */
-	private function __findEmailCheckcode($emailCheckcode) {
+	protected function __findEmailCheckcode($emailCheckcode) {
 		// checkcode存在確認
 		$conditions = array(
 			$this->alias.'.email_checkcode' => $emailCheckcode,
@@ -145,7 +144,10 @@ class User extends AppModel {
 		if (!$data) {
 			return false;
 		}
-		return $this->delete($data[$this->alias]['id']);
+		if (!$this->delete($data[$this->alias]['id'])) {
+			return false;
+		}
+		return $data[$this->alias]['email'];
 	}
 
 }
