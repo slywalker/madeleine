@@ -1,3 +1,4 @@
+tmp/**/*
 config/database.php
 config/smtp.php
 config/basic.php
