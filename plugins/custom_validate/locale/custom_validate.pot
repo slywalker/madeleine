@@ -1,0 +1,109 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# No version information was available in the source files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2009-11-03 12:01+0900\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /models/behaviors/i18n_validate_message.php:62
+msgid "This field must only contain letters and numbers."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:63
+msgid "This field must be between %1$d and %2$d characters long."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:64;65;69
+msgid "Incorrect value."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:66
+msgid "The credit card number you supplied was invalid."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:68
+msgid "Enter a valid date in YY-MM-DD format."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:70
+msgid "Please supply a valid email address."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:71
+msgid "This value must be the string %1$s."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:74
+msgid "Please supply a valid IP address."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:75
+msgid "This has already been taken."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:76;90
+msgid "This field must be at least %1$d characters long."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:77;91
+msgid "This field must be no larger than %1$d characters long."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:78
+msgid "Please supply a valid monetary amount."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:79
+msgid "Please select %1$d to %2$d options"
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:80
+msgid "Enter either list."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:81
+msgid "Please supply a number."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:82
+msgid "This field cannot be left blank."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:83
+msgid "Please supply a valid phone number."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:84
+msgid "Please supply a valid postal number."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:85
+msgid "Please enter a number between %1$d and %2$d."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:86
+msgid "Please supply a valid social security number."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:87
+msgid "Please supply a valid URL address."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:89
+msgid "This value must be equal to %1$s."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:92
+msgid "Please input Hiragana."
+msgstr ""
+
