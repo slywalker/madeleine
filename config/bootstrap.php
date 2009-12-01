@@ -34,6 +34,8 @@
  * You can also use this to include or require any files in your application.
  *
  */
+	config('madeleine.ini');
+
 	Configure::write('debug', 0);
 	if ('On' === env('HTTP_DEBUG')) {
 		Configure::write('debug', 2);
