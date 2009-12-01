@@ -1,7 +1,6 @@
 <?php
 App::import('Core', 'Controller');
-App::import('Component', 'Qdsmtp');
-App::import('Component', 'Qdmail');
+App::import('Component', array('Qdsmtp', 'Qdmail'));
 
 class SendTask extends Shell {
 
