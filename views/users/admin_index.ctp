@@ -1,3 +1,4 @@
+<?php $this->pageTitle = __('List Users', true);?>
 <div id="main">
 	<div class="users index">
 		<h2><?php __('Users');?></h2>
@@ -12,10 +13,10 @@
 		<table>
 			<?php
 			$th = array();
-			$th[] = $appPaginator->sort('disabled');
-			$th[] = $appPaginator->sort('email');
-			$th[] = $appPaginator->sort('created');
-			$th[] = $appPaginator->sort('expires');
+			$th[] = $appPaginator->sort(__('Disabled', true), 'disabled');
+			$th[] = $appPaginator->sort(__('Email', true), 'email');
+			$th[] = $appPaginator->sort(__('Created', true), 'created');
+			$th[] = $appPaginator->sort(__('Expires', true), 'expires');
 			echo $html->tableHeaders($th);
 			foreach ($users as $key => $user) {
 				$td = array();

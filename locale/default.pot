@@ -1,0 +1,395 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from file: Revision: 7805 /madeleine/webroot/test.php
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2009-12-01 13:57+0900\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /controllers/posts_controller.php:11;31
+msgid "Invalid Post"
+msgstr ""
+
+#: /controllers/posts_controller.php:21;36
+msgid "The Post has been saved"
+msgstr ""
+
+#: /controllers/posts_controller.php:24;39
+msgid "The Post could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/posts_controller.php:44
+msgid "The Post alredy sended."
+msgstr ""
+
+#: /controllers/posts_controller.php:54;59
+msgid "Post deleted"
+msgstr ""
+
+#: /controllers/users_controller.php:39;44
+msgid "User deleted"
+msgstr ""
+
+#: /controllers/users_controller.php:61
+#: /vendors/shells/tasks/register.php:24
+msgid "Confirm Register"
+msgstr ""
+
+#: /controllers/users_controller.php:63;88
+msgid "A confirm mail has been sent"
+msgstr ""
+
+#: /controllers/users_controller.php:68
+msgid "The User could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/users_controller.php:86
+msgid "Confirm Cancel"
+msgstr ""
+
+#: /controllers/users_controller.php:93
+msgid "Invalid Email"
+msgstr ""
+
+#: /controllers/users_controller.php:105
+msgid "Confirm has been success"
+msgstr ""
+
+#: /controllers/users_controller.php:108;126
+msgid "Invalid URL"
+msgstr ""
+
+#: /controllers/users_controller.php:121
+msgid "Your Email has cancelled"
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:62
+msgid "This field must only contain letters and numbers."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:63
+msgid "This field must be between %1$d and %2$d characters long."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:64;65;69
+msgid "Incorrect value."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:66
+msgid "The credit card number you supplied was invalid."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:68
+msgid "Enter a valid date in YY-MM-DD format."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:70
+msgid "Please supply a valid email address."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:71
+msgid "This value must be the string %1$s."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:74
+msgid "Please supply a valid IP address."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:75
+msgid "This has already been taken."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:76;90
+msgid "This field must be at least %1$d characters long."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:77;91
+msgid "This field must be no larger than %1$d characters long."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:78
+msgid "Please supply a valid monetary amount."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:79
+msgid "Please select %1$d to %2$d options"
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:80
+msgid "Enter either list."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:81
+msgid "Please supply a number."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:82
+msgid "This field cannot be left blank."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:83
+msgid "Please supply a valid phone number."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:84
+msgid "Please supply a valid postal number."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:85
+msgid "Please enter a number between %1$d and %2$d."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:86
+msgid "Please supply a valid social security number."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:87
+msgid "Please supply a valid URL address."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:89
+msgid "This value must be equal to %1$s."
+msgstr ""
+
+#: /plugins/custom_validate/models/behaviors/i18n_validate_message.php:92
+msgid "Please input Hiragana."
+msgstr ""
+
+#: /views/elements/main_navigation.ctp:3
+#: /views/posts/admin_index.ctp:5
+msgid "Posts"
+msgstr ""
+
+#: /views/elements/main_navigation.ctp:4
+#: /views/users/admin_index.ctp:4
+msgid "Users"
+msgstr ""
+
+#: /views/helpers/app_paginator.php:8
+msgid "Limit [ %currents% ]"
+msgstr ""
+
+#: /views/layouts/default.ctp:6
+#: /views/layouts/simple.ctp:6
+msgid "Madeleine:"
+msgstr ""
+
+#: /views/layouts/default.ctp:10
+#: /views/layouts/simple.ctp:10
+msgid "description"
+msgstr ""
+
+#: /views/layouts/default.ctp:11
+#: /views/layouts/simple.ctp:11
+msgid "keyword"
+msgstr ""
+
+#: /views/layouts/default.ctp:24
+msgid "Madeleine"
+msgstr ""
+
+#: /views/pages/home.ctp:12
+msgid "Your tmp directory is writable."
+msgstr ""
+
+#: /views/pages/home.ctp:16
+msgid "Your tmp directory is NOT writable."
+msgstr ""
+
+#: /views/pages/home.ctp:26
+msgid "The %s is being used for caching. To change the config edit APP/config/core.php "
+msgstr ""
+
+#: /views/pages/home.ctp:30
+msgid "Your cache is NOT working. Please check the settings in APP/config/core.php"
+msgstr ""
+
+#: /views/pages/home.ctp:40
+msgid "Your database configuration file is present."
+msgstr ""
+
+#: /views/pages/home.ctp:45
+msgid "Your database configuration file is NOT present."
+msgstr ""
+
+#: /views/pages/home.ctp:47
+msgid "Rename config/database.php.default to config/database.php"
+msgstr ""
+
+#: /views/pages/home.ctp:62
+msgid "Cake is able to connect to the database."
+msgstr ""
+
+#: /views/pages/home.ctp:66
+msgid "Cake is NOT able to connect to the database."
+msgstr ""
+
+#: /views/pages/home.ctp:72
+msgid "Editing this Page"
+msgstr ""
+
+#: /views/pages/home.ctp:75
+msgid "To change the content of this page, edit: %s\n\t\tTo change its layout, edit: %s\n\t\tYou can also add some CSS styles for your pages at: %s"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:1;7
+msgid "Add Post"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:8
+#: /views/posts/admin_edit.ctp:9
+#: /views/posts/admin_index.ctp:19
+#: /views/posts/admin_view.ctp:10
+msgid "Que"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:9
+#: /views/posts/admin_edit.ctp:10
+#: /views/posts/admin_index.ctp:18
+#: /views/posts/admin_view.ctp:8
+msgid "Subject"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:10
+#: /views/posts/admin_edit.ctp:11
+#: /views/posts/admin_view.ctp:9
+msgid "Body"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:12
+#: /views/posts/admin_edit.ctp:13
+#: /views/users/cancel.ctp:12
+#: /views/users/register.ctp:12
+msgid "Submit"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:18
+#: /views/posts/admin_edit.ctp:19
+#: /views/posts/admin_index.ctp:22;62
+#: /views/posts/admin_view.ctp:27
+msgid "Actions"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:21
+#: /views/posts/admin_edit.ctp:23
+#: /views/posts/admin_index.ctp:1
+#: /views/posts/admin_view.ctp:34
+msgid "List Posts"
+msgstr ""
+
+#: /views/posts/admin_edit.ctp:1;7
+#: /views/posts/admin_view.ctp:31
+msgid "Edit Post"
+msgstr ""
+
+#: /views/posts/admin_edit.ctp:22
+#: /views/posts/admin_index.ctp:39
+msgid "Delete"
+msgstr ""
+
+#: /views/posts/admin_edit.ctp:22
+#: /views/posts/admin_index.ctp:39
+#: /views/posts/admin_view.ctp:32
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:9
+#: /views/users/admin_index.ctp:8
+msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:17
+msgid "Del"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:20
+#: /views/posts/admin_view.ctp:11
+msgid "Sended"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:21
+#: /views/posts/admin_view.ctp:12
+#: /views/users/admin_index.ctp:18
+msgid "Created"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:36
+msgid "View"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:38
+msgid "Edit"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:49
+msgid "Delete Selected"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:52
+#: /views/users/admin_index.ctp:36
+msgid "previous"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:54
+#: /views/users/admin_index.ctp:38
+msgid "next"
+msgstr ""
+
+#: /views/posts/admin_index.ctp:65
+#: /views/posts/admin_view.ctp:35
+msgid "New Post"
+msgstr ""
+
+#: /views/posts/admin_view.ctp:1
+msgid "View Post"
+msgstr ""
+
+#: /views/posts/admin_view.ctp:4
+msgid "Post"
+msgstr ""
+
+#: /views/posts/admin_view.ctp:32
+msgid "Delete Post"
+msgstr ""
+
+#: /views/users/admin_index.ctp:1
+msgid "List Users"
+msgstr ""
+
+#: /views/users/admin_index.ctp:16
+msgid "Disabled"
+msgstr ""
+
+#: /views/users/admin_index.ctp:17
+#: /views/users/cancel.ctp:10
+#: /views/users/register.ctp:10
+msgid "Email"
+msgstr ""
+
+#: /views/users/admin_index.ctp:19
+msgid "Expires"
+msgstr ""
+
+#: /views/users/cancel.ctp:3;9
+#: /views/users/register.ctp:16
+msgid "Cancel"
+msgstr ""
+
+#: /views/users/cancel.ctp:16
+#: /views/users/register.ctp:3;9
+msgid "Register"
+msgstr ""
+
+#: /webroot/test.php:99
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+

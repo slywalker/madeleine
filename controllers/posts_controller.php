@@ -40,6 +40,10 @@ class PostsController extends AppController {
 			}
 		} else {
 			$this->data = $this->Post->read(null, $id);
+			if ($this->data['Post']['sended']) {
+				$this->Session->setFlash(__('The Post alredy sended.', true));
+				$this->redirect(array('action'=>'index'));
+			}
 		}
 	}
 

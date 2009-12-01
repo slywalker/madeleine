@@ -7,7 +7,6 @@
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
-	echo $html->meta('icon');
 	echo $html->meta('description', __('description', true));
 	echo $html->meta('keywords', __('keyword', true));
 	echo $html->css(array('cake.base', 'cake.style'));

@@ -1,12 +1,13 @@
+<?php $this->pageTitle = __('Add Post', true);?>
 <div id="main">
 	<div class="posts form">
 		<?php
 		echo $form->create('Post');
 		echo $form->inputs(array(
 			'legend' => __('Add Post', true),
-			'subject',
-			'body',
-			'que',
+			'que' => array('label' => __('Que', true), 'dateFormat' => 'YMD', 'monthNames' => false, 'timeFormat' => '24', 'interval' => 10),
+			'subject' => array('label' => __('Subject', true)),
+			'body' => array('label' => __('Body', true), 'rows' => 20),
 		));
 		echo $form->end(__('Submit', true));
 		?>

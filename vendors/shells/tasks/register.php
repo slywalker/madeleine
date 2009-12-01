@@ -13,9 +13,9 @@ class RegisterTask extends Shell {
 	}
 
 	public function execute() {
-		$Receiver = QdmailReceiver::start('stdin');
-		$Receiver->getMail();
-		$email = $Receiver->header(array('from', 'mail'));
+		$receiver = QdmailReceiver::start('stdin');
+		$receiver->getMail();
+		$email = $receiver->header(array('from', 'mail'));
 		if ($email) {
 			$this->User->begin();
 			if ($user = $this->User->register($email)) {
@@ -32,24 +32,23 @@ class RegisterTask extends Shell {
 	}
 
 	private function __send($to, $subject, $template = 'default', $config = 'default') {
-		$this->Qdmail = new QdmailComponent(null);
-		$this->Qdmail->startup($this->controller);
+		$qdmail = new QdmailComponent(null);
+		$qdmail->startup($this->controller);
 		
-		if (config('smtp')) {
-			$params = SMTP_CONFIG::$$config;
-			$this->Qdmail->smtp(true);
-			$this->Qdmail->smtpServer($params);
-		}
+		config('smtp');
+		$params = SMTP_CONFIG::$$config;
+		$qdmail->smtp(true);
+		$qdmail->smtpServer($params);
 		
-		//$this->Qdmail->debug(2);
-		$this->Qdmail->to($to);
-		$this->Qdmail->from($params['from']);
-		$this->Qdmail->subject($subject);
+		//$qdmail->debug(2);
+		$qdmail->to($to);
+		$qdmail->from($params['from']);
+		$qdmail->subject($subject);
 		
 		$this->controller->view = 'View';
-		$this->Qdmail->cakeText(null, $template, null, null, 'iso-2022-jp');
+		$qdmail->cakeText(null, $template, null, null, 'iso-2022-jp');
 		
-		return $this->Qdmail->send();
+		return $qdmail->send();
 	}
 
 }

@@ -5,9 +5,12 @@ App::import('Component', array('Qdsmtp', 'Qdmail'));
 class SendTask extends Shell {
 
 	public $uses = array('User', 'Post');
+	public $controller = null;
 	private $postConditions = array();
 
 	public function startup(){
+		$this->controller = new Controller();
+
 		$this->postConditions = array(
 			'sended' => null,
 			'que <=' => date('Y-m-d H:i:s'),
@@ -41,9 +44,8 @@ class SendTask extends Shell {
 	}
 
 	private function __sendPosts($count) {
-		$this->controller = new Controller();
-		$this->Qdmail = new QdmailComponent(null);
-		$this->Qdmail->startup($this->controller);
+		$qdmail = new QdmailComponent(null);
+		$qdmail->startup($this->controller);
 
 		$sended = 0;
 		for ($i = 0; $i < $count; $i++) {
@@ -51,7 +53,7 @@ class SendTask extends Shell {
 			$offset = $i;
 			$post = $this->Post->find('first', compact('conditions', 'offset'));
 			
-			$success = $this->__sendUsers($post);
+			$success = $this->__sendUsers($qdmail, $post);
 			if ($success) {
 				$this->Post->modifySended($post['Post']['id']);
 			}
@@ -63,7 +65,7 @@ class SendTask extends Shell {
 		return $sended;
 	}
 
-	private function __sendUsers($post) {
+	private function __sendUsers(&$qdmail, $post) {
 		$userConditions = array('disabled' => 0);
 		$success = 0;
 		$miss = 0;
@@ -73,20 +75,20 @@ class SendTask extends Shell {
 		if ($count) {
 			config('smtp');
 			$params = SMTP_CONFIG::$default;
-			$this->Qdmail->smtp(true);
-			$this->Qdmail->smtpServer($params);
+			$qdmail->smtp(true);
+			$qdmail->smtpServer($params);
 			//$this->Qdmail->debug(2);
-			$this->Qdmail->from($params['from']);
-			$this->Qdmail->subject($post['Post']['subject']);
-			$this->Qdmail->body('text', $post['Post']['body'], null, 'iso-2022-jp');
+			$qdmail->from($params['from']);
+			$qdmail->subject($post['Post']['subject']);
+			$qdmail->body('text', $post['Post']['body'], null, 'iso-2022-jp');
 
 			for ($i = 0; $i < $count; $i++) {
 				$conditions = $this->__sqlNoCache($userConditions);
 				$fields = array('email');
 				$offset = $i;
 				$user = $this->User->find('first', compact('conditions', 'fields', 'offset'));
-				$this->Qdmail->to($user['User']['email']);
-				if ($this->Qdmail->send()) {
+				$qdmail->to($user['User']['email']);
+				if ($qdmail->send()) {
 					$success++;
 				} else {
 					$miss++;

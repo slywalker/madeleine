@@ -1,22 +1,17 @@
-<div id="main">
-	<div class="users form">
-		<?php
-		echo $form->create('User', array('action' => 'register'));
-		echo $form->inputs(array(
-			'legend' => __('Register', true),
-			'email',
-		));
-		echo $form->end(__('Submit', true));
-		?>
-	</div>
+<?php
+$this->layout = 'simple';
+$this->pageTitle = __('Register', true);
+?>
+<div class="users form">
+	<?php
+	echo $form->create('User', array('action' => 'register'));
+	echo $form->inputs(array(
+		'legend' => __('Register', true),
+		'email' => array('label' => __('Email', true)),
+	));
+	echo $form->end(__('Submit', true));
+	?>
 </div>
-<div id="sidebar">
-	<div class="block">
-		<h3><?php __('Actions');?></h3>
-		<?php
-		$li = array();
-		$li[] = $html->link(__('Cancel', true), array('action' => 'cancel'));
-		echo $html->nestedList($li, array('class' => 'navigation'));
-		?>
-	</div>
+<div class="block">
+	<?php echo $html->link(__('Cancel', true), array('action' => 'cancel'));?>
 </div>
