@@ -8,7 +8,7 @@ class SendTask extends Shell {
 	public $controller = null;
 	private $postConditions = array();
 
-	public function startup(){
+	public function startup() {
 		$this->controller = new Controller();
 
 		$this->postConditions = array(

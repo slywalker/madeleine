@@ -6,7 +6,7 @@ class ErrorTask extends Shell {
 	public $uses = array('User');
 	public $controller = null;
 
-	public function startup(){
+	public function startup() {
 	}
 
 	public function execute() {

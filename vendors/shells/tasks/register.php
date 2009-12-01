@@ -8,7 +8,7 @@ class RegisterTask extends Shell {
 	public $uses = array('User');
 	public $controller = null;
 
-	public function startup(){
+	public function startup() {
 		$this->controller = new Controller();
 	}
 
@@ -19,7 +19,6 @@ class RegisterTask extends Shell {
 		if ($email) {
 			$this->User->begin();
 			if ($user = $this->User->register($email)) {
-				// sendmail
 				$this->controller->set(compact('user'));
 				if ($this->__send($user['User']['email'], __('Confirm Register', true), 'confirm_register')) {
 					$this->User->commit();
