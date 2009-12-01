@@ -18,7 +18,6 @@
 			$th[] = $appPaginator->sort('expires');
 			$th[] = $appPaginator->sort('email_checkcode');
 			$th[] = $appPaginator->sort('disabled');
-			$th[] = $appPaginator->sort('modified');
 			$th[] = $appPaginator->sort('created');
 			$th[] = __('Actions', true);
 			echo $html->tableHeaders($th);
@@ -29,7 +28,6 @@
 				$td[] = h($user['User']['expires']);
 				$td[] = h($user['User']['email_checkcode']);
 				$td[] = h($user['User']['disabled']);
-				$td[] = h($user['User']['modified']);
 				$td[] = h($user['User']['created']);
 				$actions = array();
 				$actions[] = $html->link(__('View', true), array('action' => 'view', $user['User']['id']));
