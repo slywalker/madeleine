@@ -23,7 +23,6 @@ class RegisterTask extends Shell {
 				$this->controller->set(compact('user'));
 				if ($this->__send($user['User']['email'], __('Confirm Register', true), 'confirm_register')) {
 					$this->User->commit();
-					$this->out('OK');
 					return;
 				}
 			}

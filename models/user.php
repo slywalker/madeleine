@@ -150,5 +150,23 @@ class User extends AppModel {
 		return $data[$this->alias]['email'];
 	}
 
+	/**
+	 * countUpError
+	 *
+	 * @param string $email 
+	 * @return boolen
+	 */
+	public function countUpError($email) {
+		$conditions = array('User.email' => $email);
+		$fields = array('id', 'error');
+		$user = $this->find('first', compact('conditions', 'fields'));
+		if (!$user) {
+			return false;
+		}
+		$this->id = $user['User']['id'];
+		$error = $user['User']['error'] + 1;
+		return $this->saveField('error', $error);
+	}
+
 }
 ?>

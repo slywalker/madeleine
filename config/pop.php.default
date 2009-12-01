@@ -1,0 +1,13 @@
+<?php
+class POP_CONFIG {
+
+	static $default = array(
+		'host' => 'ssl://pop.gmail.com',
+		'port' => 995,
+		'user' => 'username',
+		'pass' => 'password',
+		'protocol' => 'pop3',
+	);
+
+}
+?>
