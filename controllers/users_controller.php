@@ -15,7 +15,7 @@
  **/
 class UsersController extends AppController {
 	public $name = 'Users';
-	public $components = array('Qdmail');
+	public $components = array('RequestHandler', 'Qdmail');
 
 	/**
 	 * admin_index
@@ -60,12 +60,20 @@ class UsersController extends AppController {
 				$this->set(compact('user'));
 				if ($this->_send($user['User']['email'], __('Confirm Register', true), 'confirm_register')) {
 					$this->User->commit();
-					$this->flash(__('A confirm mail has been sent', true), array('action' => 'index'));
+					if ($this->RequestHandler->isAjax()) {
+						$this->set('success', __('A confirm mail has been sent', true));
+					} else {
+						$this->flash(__('A confirm mail has been sent', true), array('action' => 'index'));
+					}
 					return;
 				}
 			}
 			$this->User->rollback();
 			$this->Session->setFlash(__('The User could not be saved. Please, try again.', true));
+		}
+		
+		if (!$this->RequestHandler->isAjax()) {
+			$this->layout = 'simple';
 		}
 	}
 
@@ -85,12 +93,20 @@ class UsersController extends AppController {
 				$this->set(compact('user'));
 				if ($this->_send($user['User']['email'], __('Confirm Cancel', true), 'confirm_cancel')) {
 					$this->User->commit();
-					$this->flash(__('A confirm mail has been sent', true), array('action' => 'index'));
+					if ($this->RequestHandler->isAjax()) {
+						$this->set('success', __('A confirm mail has been sent', true));
+					} else {
+						$this->flash(__('A confirm mail has been sent', true), array('action' => 'index'));
+					}
 					return;
 				}
 			}
 			$this->User->rollback();
 			$this->Session->setFlash(__('Invalid Email', true));
+		}
+		
+		if (!$this->RequestHandler->isAjax()) {
+			$this->layout = 'simple';
 		}
 	}
 
