@@ -21,10 +21,10 @@ document.write('<div class="' + className + '"></div>');
 document.close();
 
 load(
-	webroot + '/jquery/js/jquery-1.3.2.min.js', 
+	webroot + '/js/jquery-1.3.2.min.js', 
 	'window.jQuery', 
 	function() {
-		$.getScript(webroot + '/jquery/js/jquery.form.js', function() {});
+		$.getScript(webroot + '/js/jquery.form.js', function() {});
 		$.get(webroot + '/users/' + action, function(html) {
 			$('div.' + className).replaceWith(html);
 		});

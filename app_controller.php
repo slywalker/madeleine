@@ -2,7 +2,7 @@
 class AppController extends Controller {
 
 	public $components = array('Security', 'DebugKit.Toolbar');
-	public $helpers = array('javascript', 'Time', 'AppPaginator');
+	public $helpers = array('Javascript', 'Time', 'AppPaginator');
 
 	/**
 	 * beforeFilter
