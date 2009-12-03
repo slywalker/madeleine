@@ -29,12 +29,12 @@ class RegisterTask extends Shell {
 		}
 	}
 
-	private function __send($to, $subject, $template = 'default', $config = 'default') {
+	private function __send($to, $subject, $template = 'default') {
 		$qdmail = new QdmailComponent(null);
 		$qdmail->startup($this->controller);
 		
-		config('smtp');
-		$params = SMTP_CONFIG::$$config;
+		config('mail');
+		$params = MAIL_CONFIG::$smtp;
 		$qdmail->smtp(true);
 		$qdmail->smtpServer($params);
 		

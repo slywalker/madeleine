@@ -151,12 +151,11 @@ class UsersController extends AppController {
 	 * @param string $config 
 	 * @return boolean
 	 */
-	protected function _send($to, $subject, $template = 'default', $config = 'default') {
-		if (config('smtp')) {
-			$params = SMTP_CONFIG::$$config;
-			$this->Qdmail->smtp(true);
-			$this->Qdmail->smtpServer($params);
-		}
+	protected function _send($to, $subject, $template = 'default') {
+		config('mail');
+		$params = MAIL_CONFIG::$smtp;
+		$this->Qdmail->smtp(true);
+		$this->Qdmail->smtpServer($params);
 		//$this->Qdmail->debug(2);
 		$this->Qdmail->to($to);
 		$this->Qdmail->from($params['from']);

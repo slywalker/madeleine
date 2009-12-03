@@ -73,8 +73,8 @@ class SendTask extends Shell {
 		$conditions = $this->__sqlNoCache($userConditions);
 		$count = $this->User->find('count', compact('conditions'));
 		if ($count) {
-			config('smtp');
-			$params = SMTP_CONFIG::$default;
+			config('mail');
+			$params = MAIL_CONFIG::$smtp;
 			$qdmail->smtp(true);
 			$qdmail->smtpServer($params);
 			//$this->Qdmail->debug(2);

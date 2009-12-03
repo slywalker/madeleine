@@ -41,6 +41,7 @@
 		Configure::write('debug', 2);
 	}
 	Configure::write('Routing.admin', 'admin');
+	Configure::write('Session.cookie', 'MADELEINE');
 	Configure::write('Security.level', 'medium');
 /**
  * The settings below can be used to set additional paths to models, views and controllers.

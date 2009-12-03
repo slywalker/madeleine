@@ -1,0 +1,22 @@
+<?php
+class MAIL_CONFIG {
+
+	static $pop = array(
+		'host' => 'ssl://pop.gmail.com',
+		'port' => 995,
+		'user' => 'username',
+		'pass' => 'password',
+		'protocol' => 'pop3',
+	);
+
+	static $smtp = array(
+		'host' => 'tls://smtp.gmail.com',
+		'port' => 465,
+		'from' => 'username@gmail.com',
+		'user' => 'username',
+		'pass' => 'password',
+		'protocol' => 'SMTP_AUTH',
+	);
+
+}
+?>

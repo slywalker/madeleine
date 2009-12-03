@@ -10,8 +10,8 @@ class ErrorTask extends Shell {
 	}
 
 	public function execute() {
-		config('pop');
-		$params = POP_CONFIG::$default;
+		config('mail');
+		$params = MAIL_CONFIG::$pop;
 		$receiver = QdmailReceiver::start('pop', $params);
 		
 		$count = $receiver->count();
