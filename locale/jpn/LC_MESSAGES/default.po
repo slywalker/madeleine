@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: madeleine\n"
-"POT-Creation-Date: 2009-12-01 13:57+0900\n"
+"POT-Creation-Date: 2009-12-03 11:08+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Yasuo Harada <slywalker.net@gmail.com>\n"
 "Language-Team: \n"
@@ -11,23 +11,23 @@ msgstr ""
 "X-Poedit-Language: Japanese\n"
 "X-Poedit-Country: JAPAN\n"
 
-#: /controllers/posts_controller.php:11;31
+#: /controllers/posts_controller.php:11;37
 msgid "Invalid Post"
 msgstr "無効な投稿です"
 
-#: /controllers/posts_controller.php:21;36
+#: /controllers/posts_controller.php:21;42
 msgid "The Post has been saved"
 msgstr "投稿を保存しました"
 
-#: /controllers/posts_controller.php:24;39
+#: /controllers/posts_controller.php:24;45
 msgid "The Post could not be saved. Please, try again."
 msgstr "投稿を保存できませんでした。もう一度入力してください"
 
-#: /controllers/posts_controller.php:44
+#: /controllers/posts_controller.php:50
 msgid "The Post alredy sended."
 msgstr "すでに送信済みの投稿です"
 
-#: /controllers/posts_controller.php:54;59
+#: /controllers/posts_controller.php:60;65
 msgid "Post deleted"
 msgstr "投稿を削除しました"
 
@@ -36,35 +36,35 @@ msgid "User deleted"
 msgstr "購読者を削除しました"
 
 #: /controllers/users_controller.php:61
-#: /vendors/shells/tasks/register.php:24
+#: /vendors/shells/tasks/register.php:23
 msgid "Confirm Register"
 msgstr "登録確認"
 
-#: /controllers/users_controller.php:63;88
+#: /controllers/users_controller.php:64;66;97;99
 msgid "A confirm mail has been sent"
 msgstr "登録確認メールを送信しました"
 
-#: /controllers/users_controller.php:68
+#: /controllers/users_controller.php:72
 msgid "The User could not be saved. Please, try again."
 msgstr "購読者登録ができませんでした。もう一度入力してください"
 
-#: /controllers/users_controller.php:86
+#: /controllers/users_controller.php:94
 msgid "Confirm Cancel"
 msgstr "解除確認"
 
-#: /controllers/users_controller.php:93
+#: /controllers/users_controller.php:105
 msgid "Invalid Email"
 msgstr "無効なメールアドレスです"
 
-#: /controllers/users_controller.php:105
+#: /controllers/users_controller.php:121
 msgid "Confirm has been success"
 msgstr "確認に成功しました"
 
-#: /controllers/users_controller.php:108;126
+#: /controllers/users_controller.php:124;142
 msgid "Invalid URL"
 msgstr "無効なURLです"
 
-#: /controllers/users_controller.php:121
+#: /controllers/users_controller.php:137
 msgid "Your Email has cancelled"
 msgstr "あたなのメールアドレスを解除しました"
 
@@ -177,7 +177,7 @@ msgstr "表示件数 [ %currents% ]"
 #: /views/layouts/default.ctp:6
 #: /views/layouts/simple.ctp:6
 msgid "Madeleine:"
-msgstr ""
+msgstr "メールマガジン:"
 
 #: /views/layouts/default.ctp:10
 #: /views/layouts/simple.ctp:10
@@ -189,9 +189,9 @@ msgstr ""
 msgid "keyword"
 msgstr ""
 
-#: /views/layouts/default.ctp:24
+#: /views/layouts/default.ctp:22
 msgid "Madeleine"
-msgstr ""
+msgstr "メールマガジン"
 
 #: /views/pages/home.ctp:12
 msgid "Your tmp directory is writable."
@@ -266,14 +266,14 @@ msgstr "本文"
 
 #: /views/posts/admin_add.ctp:12
 #: /views/posts/admin_edit.ctp:13
-#: /views/users/cancel.ctp:12
-#: /views/users/register.ctp:12
+#: /views/users/cancel.ctp:32
+#: /views/users/register.ctp:32
 msgid "Submit"
 msgstr "送信"
 
 #: /views/posts/admin_add.ctp:18
 #: /views/posts/admin_edit.ctp:19
-#: /views/posts/admin_index.ctp:22;62
+#: /views/posts/admin_index.ctp:22;63
 #: /views/posts/admin_view.ctp:27
 msgid "Actions"
 msgstr "繰作"
@@ -281,23 +281,23 @@ msgstr "繰作"
 #: /views/posts/admin_add.ctp:21
 #: /views/posts/admin_edit.ctp:23
 #: /views/posts/admin_index.ctp:1
-#: /views/posts/admin_view.ctp:34
+#: /views/posts/admin_view.ctp:35
 msgid "List Posts"
 msgstr "投稿の一覧"
 
 #: /views/posts/admin_edit.ctp:1;7
-#: /views/posts/admin_view.ctp:31
+#: /views/posts/admin_view.ctp:32
 msgid "Edit Post"
 msgstr "投稿の編集"
 
 #: /views/posts/admin_edit.ctp:22
-#: /views/posts/admin_index.ctp:39
+#: /views/posts/admin_index.ctp:40
 msgid "Delete"
 msgstr "削除"
 
 #: /views/posts/admin_edit.ctp:22
-#: /views/posts/admin_index.ctp:39
-#: /views/posts/admin_view.ctp:32
+#: /views/posts/admin_index.ctp:40
+#: /views/posts/admin_view.ctp:33
 msgid "Are you sure you want to delete # %s?"
 msgstr "本当に削除してよろしいですか？"
 
@@ -325,26 +325,31 @@ msgstr "登録日時"
 msgid "View"
 msgstr "表示"
 
-#: /views/posts/admin_index.ctp:38
+#: /views/posts/admin_index.ctp:37
+#: /views/posts/admin_view.ctp:30
+msgid "Edit As New"
+msgstr "新しい投稿として編集"
+
+#: /views/posts/admin_index.ctp:39
 msgid "Edit"
 msgstr "編集"
 
-#: /views/posts/admin_index.ctp:49
+#: /views/posts/admin_index.ctp:50
 msgid "Delete Selected"
 msgstr "選択したものを削除"
 
-#: /views/posts/admin_index.ctp:52
+#: /views/posts/admin_index.ctp:53
 #: /views/users/admin_index.ctp:36
 msgid "previous"
 msgstr "前のページ"
 
-#: /views/posts/admin_index.ctp:54
+#: /views/posts/admin_index.ctp:55
 #: /views/users/admin_index.ctp:38
 msgid "next"
 msgstr "次のページ"
 
-#: /views/posts/admin_index.ctp:65
-#: /views/posts/admin_view.ctp:35
+#: /views/posts/admin_index.ctp:66
+#: /views/posts/admin_view.ctp:36
 msgid "New Post"
 msgstr "新しい投稿"
 
@@ -356,7 +361,7 @@ msgstr "投稿の表示"
 msgid "Post"
 msgstr "投稿"
 
-#: /views/posts/admin_view.ctp:32
+#: /views/posts/admin_view.ctp:33
 msgid "Delete Post"
 msgstr "投稿の削除"
 
@@ -364,13 +369,13 @@ msgstr "投稿の削除"
 msgid "List Users"
 msgstr "購読者一覧"
 
-#: /views/users/admin_index.ctp:16
+#: /views/users/admin_index.ctp:16;23
 msgid "Disabled"
 msgstr "無効"
 
 #: /views/users/admin_index.ctp:17
-#: /views/users/cancel.ctp:10
-#: /views/users/register.ctp:10
+#: /views/users/cancel.ctp:30
+#: /views/users/register.ctp:30
 msgid "Email"
 msgstr "メールアドレス"
 
@@ -378,13 +383,17 @@ msgstr "メールアドレス"
 msgid "Expires"
 msgstr "有効期限"
 
-#: /views/users/cancel.ctp:3;9
-#: /views/users/register.ctp:16
+#: /views/users/admin_index.ctp:23
+msgid "Enabled"
+msgstr "有効"
+
+#: /views/users/cancel.ctp:3;29
+#: /views/users/register.ctp:37
 msgid "Cancel"
 msgstr "購読解除"
 
-#: /views/users/cancel.ctp:16
-#: /views/users/register.ctp:3;9
+#: /views/users/cancel.ctp:37
+#: /views/users/register.ctp:3;29
 msgid "Register"
 msgstr "購読登録"
 

@@ -27,6 +27,7 @@
 		<h3><?php __('Actions');?></h3>
 		<?php
 		$li = array();
+		$li[] = $html->link(__('Edit As New', true), array('action' => 'add', $post['Post']['id']));
 		if (empty($post['Post']['sended'])) {
 			$li[] = $html->link(__('Edit Post', true), array('action' => 'edit', $post['Post']['id']));
 			$li[] = $html->link(__('Delete Post', true), array('action' => 'delete', $post['Post']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $post['Post']['id']));

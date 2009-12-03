@@ -20,7 +20,7 @@
 			echo $html->tableHeaders($th);
 			foreach ($users as $key => $user) {
 				$td = array();
-				$td[] = h($user['User']['disabled']);
+				$td[] = ($user['User']['disabled']) ? __('Disabled', true) : __('Enabled', true);
 				$td[] = h($user['User']['email']);
 				$td[] = h($user['User']['created']);
 				$td[] = h($user['User']['expires']);

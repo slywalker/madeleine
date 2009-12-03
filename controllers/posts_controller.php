@@ -14,7 +14,7 @@ class PostsController extends AppController {
 		$this->set('post', $this->Post->read(null, $id));
 	}
 
-	public function admin_add() {
+	public function admin_add($id = null) {
 		if ($this->data) {
 			$this->Post->create();
 			if ($this->Post->save($this->data)) {
@@ -22,6 +22,12 @@ class PostsController extends AppController {
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The Post could not be saved. Please, try again.', true));
+			}
+		} else {
+			if ($id) {
+				$this->data = $this->Post->read(null, $id);
+				unset($this->data['Post']['id']);
+				unset($this->data['Post']['sended']);
 			}
 		}
 	}
