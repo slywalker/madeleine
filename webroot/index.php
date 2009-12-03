@@ -55,7 +55,7 @@
  *
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-		define('CAKE_CORE_INCLUDE_PATH', '/Users/don/local/share/cakephp');
+		define('CAKE_CORE_INCLUDE_PATH', ROOT);
 	}
 
 /**
