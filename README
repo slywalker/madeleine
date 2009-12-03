@@ -1,0 +1,2 @@
+.forward
+"|/usr/local/bin/php -q /your_core_path/cake/console/cake.php -working /your_app_path/madeleine mail register"
