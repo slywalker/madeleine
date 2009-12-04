@@ -2,6 +2,7 @@
 class Post extends AppModel {
 
 	public $name = 'Post';
+	public $order = array('Post.que' => 'DESC');
 	public $validate = array(
 		'subject' => array('notEmpty'),
 		'body' => array('notEmpty'),
