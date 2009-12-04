@@ -30,7 +30,7 @@
 				}
 				$td[] = h($post['Post']['subject']);
 				$td[] = $time->format('m-d H:i', $post['Post']['que']);
-				$td[] = $time->format('m-d H:i', $post['Post']['sended']);
+				$td[] = ($post['Post']['sended']) ? $time->format('m-d H:i', $post['Post']['sended']) : null;
 				$td[] = $time->format('m-d H:i', $post['Post']['created']);
 				$actions = array();
 				$actions[] = $html->link(__('View', true), array('action' => 'view', $post['Post']['id']));

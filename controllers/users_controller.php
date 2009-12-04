@@ -63,7 +63,7 @@ class UsersController extends AppController {
 					if ($this->RequestHandler->isAjax()) {
 						$this->set('success', __('A confirm mail has been sent', true));
 					} else {
-						$this->flash(__('A confirm mail has been sent', true), array('action' => 'index'));
+						$this->flash(__('A confirm mail has been sent', true), Configure::read('Madeleine.home'));
 					}
 					return;
 				}
@@ -96,7 +96,7 @@ class UsersController extends AppController {
 					if ($this->RequestHandler->isAjax()) {
 						$this->set('success', __('A confirm mail has been sent', true));
 					} else {
-						$this->flash(__('A confirm mail has been sent', true), array('action' => 'index'));
+						$this->flash(__('A confirm mail has been sent', true), Configure::read('Madeleine.home'));
 					}
 					return;
 				}
@@ -118,10 +118,10 @@ class UsersController extends AppController {
 	 */
 	public function confirm_register($emailCheckcode = null) {
 		if ($this->User->confirmRegister($emailCheckcode)) {
-			$this->flash(__('Confirm has been success', true), array('action' => 'index'));
+			$this->flash(__('Confirm has been success', true), Configure::read('Madeleine.home'));
 			return;
 		}
-		$this->flash(__('Invalid URL', true), array('action' => 'index'));
+		$this->flash(__('Invalid URL', true), Configure::read('Madeleine.home'));
 	}
 
 	/**
@@ -134,12 +134,12 @@ class UsersController extends AppController {
 		if ($emailCheckcode) {
 			$email = $this->User->confirmDelete($emailCheckcode);
 			if ($email) {
-				$this->flash(__('Your Email has cancelled', true), array('action' => 'index'));
+				$this->flash(__('Your Email has cancelled', true), Configure::read('Madeleine.home'));
 				CakeLog::write('cancel', $email);
 				return;
 			}
 		}
-		$this->flash(__('Invalid URL', true), array('action' => 'index'));
+		$this->flash(__('Invalid URL', true), Configure::read('Madeleine.home'));
 	}
 
 	/**
