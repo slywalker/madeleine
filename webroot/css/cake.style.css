@@ -9,7 +9,7 @@ body{color:#222;background:#E3E4E7;font-family:helvetica,arial,sans-serif;}
 hr{background:#f0f0ee;color:#f0f0ee;}
 dl{-moz-border-radius:4px;-webkit-border-radius:4px;background-color:#fff;border:1px solid #E3E4E7;border-top:10px solid #91959D;}
 dl dd{border-bottom:1px solid #91959D;}
-#container{font-size:1em;}
+#container{font-size:.8em;}
 #header{background:#91959D;}
 #header h1{padding:10px 20px;}
 #header h1 a:link,#header h1 a:active,#header h1 a:hover,#header h1 a:visited{color:#FFF;}

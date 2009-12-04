@@ -328,7 +328,7 @@ msgstr "表示"
 #: /views/posts/admin_index.ctp:37
 #: /views/posts/admin_view.ctp:30
 msgid "Edit As New"
-msgstr "新しい投稿として編集"
+msgstr "新しく編集"
 
 #: /views/posts/admin_index.ctp:39
 msgid "Edit"
