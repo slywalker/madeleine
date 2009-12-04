@@ -1,6 +1,6 @@
 =======================================================================
 ※このメールは、登録メールアドレスあてに自動的にお送りしています。
-※登録内容をご確認のうえ、大切に保管してください。返信の必要はありません。
+※返信の必要はありません。
 =======================================================================
 
 当サイトにご登録くださいましてありがとうございます。
@@ -11,7 +11,7 @@
 
 ■登録メールアドレス確認
 <?php
-echo $html->url(array(Configure::read('Routing.admin') => false, 'action' => 'confirm_register', $user['User']['email_checkcode']), true);
+echo $html->url(array(Configure::read('Routing.admin') => false, 'controller' => 'users', 'action' => 'confirm_register', $user['User']['email_checkcode']), true);
 ?>
 
 ※登録メールアドレス確認を行わないと、サービスのご利用ができません。
