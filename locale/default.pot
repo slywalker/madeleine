@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2009-12-03 11:08+0900\n"
+"POT-Creation-Date: 2009-12-04 18:15+0900\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -15,24 +15,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /controllers/posts_controller.php:11;37
+#: /controllers/posts_controller.php:16;44
 msgid "Invalid Post"
 msgstr ""
 
-#: /controllers/posts_controller.php:21;42
+#: /controllers/posts_controller.php:26;49
 msgid "The Post has been saved"
 msgstr ""
 
-#: /controllers/posts_controller.php:24;45
+#: /controllers/posts_controller.php:29;52
 msgid "The Post could not be saved. Please, try again."
 msgstr ""
 
-#: /controllers/posts_controller.php:50
+#: /controllers/posts_controller.php:57
 msgid "The Post alredy sended."
 msgstr ""
 
-#: /controllers/posts_controller.php:60;65
+#: /controllers/posts_controller.php:67;72
 msgid "Post deleted"
+msgstr ""
+
+#: /controllers/templates_controller.php:15;35
+msgid "Invalid Template"
+msgstr ""
+
+#: /controllers/templates_controller.php:25;40
+msgid "The Template has been saved"
+msgstr ""
+
+#: /controllers/templates_controller.php:28;43
+msgid "The Template could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/templates_controller.php:54;59
+msgid "Template deleted"
 msgstr ""
 
 #: /controllers/users_controller.php:39;44
@@ -40,7 +56,7 @@ msgid "User deleted"
 msgstr ""
 
 #: /controllers/users_controller.php:61
-#: /vendors/shells/tasks/register.php:23
+#: /vendors/shells/tasks/register.php:25
 msgid "Confirm Register"
 msgstr ""
 
@@ -174,6 +190,11 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
+#: /views/elements/main_navigation.ctp:5
+#: /views/templates/admin_index.ctp:5
+msgid "Templates"
+msgstr ""
+
 #: /views/helpers/app_paginator.php:8
 msgid "Limit [ %currents% ]"
 msgstr ""
@@ -241,45 +262,63 @@ msgstr ""
 msgid "To change the content of this page, edit: %s\n\t\tTo change its layout, edit: %s\n\t\tYou can also add some CSS styles for your pages at: %s"
 msgstr ""
 
-#: /views/posts/admin_add.ctp:1;7
+#: /views/posts/admin_add.ctp:2;29
 msgid "Add Post"
 msgstr ""
 
-#: /views/posts/admin_add.ctp:8
+#: /views/posts/admin_add.ctp:6
+msgid "Append to Body. OK?"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:30
 #: /views/posts/admin_edit.ctp:9
 #: /views/posts/admin_index.ctp:19
 #: /views/posts/admin_view.ctp:10
 msgid "Que"
 msgstr ""
 
-#: /views/posts/admin_add.ctp:9
+#: /views/posts/admin_add.ctp:31
+#: /views/templates/admin_view.ctp:4
+msgid "Template"
+msgstr ""
+
+#: /views/posts/admin_add.ctp:32
 #: /views/posts/admin_edit.ctp:10
 #: /views/posts/admin_index.ctp:18
 #: /views/posts/admin_view.ctp:8
 msgid "Subject"
 msgstr ""
 
-#: /views/posts/admin_add.ctp:10
+#: /views/posts/admin_add.ctp:33
 #: /views/posts/admin_edit.ctp:11
 #: /views/posts/admin_view.ctp:9
+#: /views/templates/admin_add.ctp:9
+#: /views/templates/admin_edit.ctp:10
+#: /views/templates/admin_view.ctp:9
 msgid "Body"
 msgstr ""
 
-#: /views/posts/admin_add.ctp:12
+#: /views/posts/admin_add.ctp:35
 #: /views/posts/admin_edit.ctp:13
+#: /views/templates/admin_add.ctp:11
+#: /views/templates/admin_edit.ctp:12
 #: /views/users/cancel.ctp:32
 #: /views/users/register.ctp:32
 msgid "Submit"
 msgstr ""
 
-#: /views/posts/admin_add.ctp:18
+#: /views/posts/admin_add.ctp:41
 #: /views/posts/admin_edit.ctp:19
 #: /views/posts/admin_index.ctp:22;63
 #: /views/posts/admin_view.ctp:27
+#: /views/templates/admin_add.ctp:17
+#: /views/templates/admin_edit.ctp:18
+#: /views/templates/admin_index.ctp:19;50
+#: /views/templates/admin_view.ctp:24
 msgid "Actions"
 msgstr ""
 
-#: /views/posts/admin_add.ctp:21
+#: /views/posts/admin_add.ctp:44
 #: /views/posts/admin_edit.ctp:23
 #: /views/posts/admin_index.ctp:1
 #: /views/posts/admin_view.ctp:35
@@ -293,21 +332,28 @@ msgstr ""
 
 #: /views/posts/admin_edit.ctp:22
 #: /views/posts/admin_index.ctp:40
+#: /views/templates/admin_edit.ctp:21
+#: /views/templates/admin_index.ctp:28
 msgid "Delete"
 msgstr ""
 
 #: /views/posts/admin_edit.ctp:22
 #: /views/posts/admin_index.ctp:40
 #: /views/posts/admin_view.ctp:33
+#: /views/templates/admin_edit.ctp:21
+#: /views/templates/admin_index.ctp:28
+#: /views/templates/admin_view.ctp:28
 msgid "Are you sure you want to delete # %s?"
 msgstr ""
 
 #: /views/posts/admin_index.ctp:9
+#: /views/templates/admin_index.ctp:9
 #: /views/users/admin_index.ctp:8
 msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
 msgstr ""
 
 #: /views/posts/admin_index.ctp:17
+#: /views/templates/admin_index.ctp:17
 msgid "Del"
 msgstr ""
 
@@ -323,6 +369,7 @@ msgid "Created"
 msgstr ""
 
 #: /views/posts/admin_index.ctp:36
+#: /views/templates/admin_index.ctp:26
 msgid "View"
 msgstr ""
 
@@ -332,19 +379,23 @@ msgid "Edit As New"
 msgstr ""
 
 #: /views/posts/admin_index.ctp:39
+#: /views/templates/admin_index.ctp:27
 msgid "Edit"
 msgstr ""
 
 #: /views/posts/admin_index.ctp:50
+#: /views/templates/admin_index.ctp:37
 msgid "Delete Selected"
 msgstr ""
 
 #: /views/posts/admin_index.ctp:53
+#: /views/templates/admin_index.ctp:40
 #: /views/users/admin_index.ctp:36
 msgid "previous"
 msgstr ""
 
 #: /views/posts/admin_index.ctp:55
+#: /views/templates/admin_index.ctp:42
 #: /views/users/admin_index.ctp:38
 msgid "next"
 msgstr ""
@@ -364,6 +415,42 @@ msgstr ""
 
 #: /views/posts/admin_view.ctp:33
 msgid "Delete Post"
+msgstr ""
+
+#: /views/templates/admin_add.ctp:1;7
+msgid "Add Template"
+msgstr ""
+
+#: /views/templates/admin_add.ctp:8
+#: /views/templates/admin_edit.ctp:9
+#: /views/templates/admin_index.ctp:18
+#: /views/templates/admin_view.ctp:8
+msgid "Template Name"
+msgstr ""
+
+#: /views/templates/admin_add.ctp:20
+#: /views/templates/admin_edit.ctp:22
+#: /views/templates/admin_index.ctp:1
+#: /views/templates/admin_view.ctp:29
+msgid "List Templates"
+msgstr ""
+
+#: /views/templates/admin_edit.ctp:1;7
+#: /views/templates/admin_view.ctp:27
+msgid "Edit Template"
+msgstr ""
+
+#: /views/templates/admin_index.ctp:53
+#: /views/templates/admin_view.ctp:30
+msgid "New Template"
+msgstr ""
+
+#: /views/templates/admin_view.ctp:1
+msgid "View Template"
+msgstr ""
+
+#: /views/templates/admin_view.ctp:28
+msgid "Delete Template"
 msgstr ""
 
 #: /views/users/admin_index.ctp:1

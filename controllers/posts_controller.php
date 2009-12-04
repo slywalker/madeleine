@@ -2,6 +2,11 @@
 class PostsController extends AppController {
 	public $name = 'Posts';
 
+	public function beforFilter() {
+		parent::beforeFilter();
+		$this->Security->disabledFields = array('template');
+	}
+	
 	public function admin_index() {
 		$this->set('posts', $this->paginate());
 	}
@@ -30,6 +35,8 @@ class PostsController extends AppController {
 				unset($this->data['Post']['sended']);
 			}
 		}
+		$templates = ClassRegistry::init('Template')->find('list');
+		$this->set(compact('templates'));
 	}
 
 	public function admin_edit($id = null) {

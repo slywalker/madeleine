@@ -1,4 +1,26 @@
-<?php $this->pageTitle = __('Add Post', true);?>
+<?php
+$this->pageTitle = __('Add Post', true);
+
+$javascript->link('jquery-1.3.2.min', false);
+$url = $html->url(array('controller' => 'templates', 'action' => 'get_ajax'));
+$confirmMessage = __('Append to Body. OK?', true);
+$code = <<<EOT
+$(function(){
+	$('select#PostTemplate').change(function () {
+		var value = $('select#PostTemplate option:selected').val();
+		if (value) {
+			ret = confirm('$confirmMessage');
+			if (ret == true){
+				$.get('$url/' + value, function(html) {
+					$('textarea#PostBody').append(html);
+				});
+			}
+		}
+	});
+});
+EOT;
+$javascript->codeBlock($code, array('inline' => false));
+?>
 <div id="main">
 	<div class="posts form">
 		<?php
@@ -6,6 +28,7 @@
 		echo $form->inputs(array(
 			'legend' => __('Add Post', true),
 			'que' => array('label' => __('Que', true), 'dateFormat' => 'YMD', 'monthNames' => false, 'timeFormat' => '24', 'interval' => 10),
+			'template' => array('label' => __('Template', true), 'options' => $templates, 'empty' => ''),
 			'subject' => array('label' => __('Subject', true)),
 			'body' => array('label' => __('Body', true), 'rows' => 20),
 		));
