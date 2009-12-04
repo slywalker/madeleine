@@ -14,7 +14,7 @@
 echo $html->url(array(Configure::read('Routing.admin') => false, 'controller' => 'users', 'action' => 'confirm_cancel', $user['User']['email_checkcode']), true);
 ?>
 
-※登録メールアドレス確認を行わないと、サービスのご利用ができません。
+※登録メールアドレス確認後、メルマガ解除となります。
 
 ===============================
 このメールに心あたりがない場合
