@@ -22,7 +22,7 @@ class ErrorTask extends Shell {
 		for($i = 1; $i <= $count; $i++) {
 			$body = $receiver->text();
 			$this->__countUpError($body);
-			//$receiver->delete();
+			$receiver->delete();
 			$receiver->next();
 		}
 		$receiver->done();
