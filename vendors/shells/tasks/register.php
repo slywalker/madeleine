@@ -1,5 +1,5 @@
 <?php
-App::import('Core', array('Router', 'Controller'));
+App::import('Core', array('Router', 'Controller', 'L10n'));
 App::import('Component', array('Qdsmtp', 'Qdmail'));
 App::import('Vendor', 'QdmailReceiver', array('file' => 'qdmail_receiver.php'));
 
@@ -9,6 +9,8 @@ class RegisterTask extends Shell {
 	public $controller = null;
 
 	public function startup() {
+		$this->L10n = new L10n();
+		$this->L10n->get('jpn');
 		$this->controller = new Controller();
 	}
 
