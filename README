@@ -1,2 +1,6 @@
 .forward
-"|/usr/local/bin/php -q /your_core_path/cake/console/cake.php -working /your_app_path/madeleine mail register"
+"|/usr/local/bin/php /your_core_path/cake/console/cake.php -app /your_app_path/madeleine mail register"
+
+cron
+*/10 * * * * /usr/local/bin/php /your_core_path/cake/console/cake.php -app /your_app_path/madeleine mail send 1> /dev/null
+*/10 * * * * /usr/local/bin/php /your_core_path/cake/console/cake.php -app /your_app_path/madeleine mail error 1> /dev/null
