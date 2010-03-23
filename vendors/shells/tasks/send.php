@@ -35,10 +35,10 @@ class SendTask extends Shell {
 		$count = $this->Post->find('count', compact('conditions'));
 		if ($count == 0) {
 			$this->out('Posts are not exists!!!');
-			CakeLog::write('sandmail', 'Posts are not exists.');
+			CakeLog::write('sendmail', 'Posts are not exists.');
 		} else {
 			$this->out(sprintf('%s posts exists.', intval($count)));
-			CakeLog::write('sandmail', sprintf('Send start!!! %s posts exists.', intval($count)));
+			CakeLog::write('sendmail', sprintf('Send start!!! %s posts exists.', intval($count)));
 		}
 		return $count;
 	}
@@ -60,7 +60,7 @@ class SendTask extends Shell {
 			$sended += $success;
 		}
 		$this->out(sprintf('Sended total %s mails.', $sended));
-		CakeLog::write('sandmail', sprintf('Send Finsh!!! total %s mails.', intval($count), $sended));
+		CakeLog::write('sendmail', sprintf('Send Finsh!!! total %s mails.', intval($count), $sended));
 		
 		return $sended;
 	}
@@ -92,11 +92,11 @@ class SendTask extends Shell {
 					$success++;
 				} else {
 					$miss++;
-					CakeLog::write('sandmail', sprintf('miss: %s', $user['User']['email']));
+					CakeLog::write('sendmail', sprintf('miss: %s', $user['User']['email']));
 				}
 			}
 			$this->out(sprintf('Send mails. success: %s, miss: %s', $success, $miss));
-			CakeLog::write('sandmail', sprintf('Send mails. success: %s, miss: %s.', $success, $miss));
+			CakeLog::write('sendmail', sprintf('Send mails. success: %s, miss: %s.', $success, $miss));
 		}
 		return $success;
 	}
