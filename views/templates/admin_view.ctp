@@ -6,7 +6,7 @@
 			<?php
 			$lists = array();
 			$lists[] = array('dt' => __('Template Name', true), 'dd' => h($template['Template']['name']));
-			$lists[] = array('dt' => __('Body', true), 'dd' => h($template['Template']['body']));
+			$lists[] = array('dt' => __('Body', true), 'dd' => nl2br(h($template['Template']['body'])));
 			foreach ($lists as $key => $list) {
 				$class = array();
 				if ($key % 2 == 0) {

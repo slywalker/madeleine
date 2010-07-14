@@ -6,7 +6,7 @@
 			<?php
 			$lists = array();
 			$lists[] = array('dt' => __('Subject', true), 'dd' => h($post['Post']['subject']));
-			$lists[] = array('dt' => __('Body', true), 'dd' => h($post['Post']['body']));
+			$lists[] = array('dt' => __('Body', true), 'dd' => nl2br(h($post['Post']['body'])));
 			$lists[] = array('dt' => __('Que', true), 'dd' => h($post['Post']['que']));
 			$lists[] = array('dt' => __('Sended', true), 'dd' => h($post['Post']['sended']));
 			$lists[] = array('dt' => __('Created', true), 'dd' => h($post['Post']['created']));
