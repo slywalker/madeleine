@@ -8,5 +8,10 @@ class Template extends AppModel {
 		'body' => array('notempty')
 	);
 
+	public function beforeValidate() {
+		if ($this->data['Template']['body']) {
+			$this->data['Template']['body'] = mb_convert_kana($this->data['Template']['body'], 'KV');
+		}
+	}
 }
 ?>
