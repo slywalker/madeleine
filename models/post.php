@@ -8,6 +8,12 @@ class Post extends AppModel {
 		'body' => array('notEmpty'),
 	);
 
+	public function beforeValidate() {
+		if ($this->data['Post']['body']) {
+			$this->data['Post']['body'] = mb_convert_kana($this->data['Post']['body'], 'KV');
+		}
+	}
+
 	public function modifySended($id) {
 		$this->id = $id;
 		return $this->saveField('sended', date('Y-m-d H:i:s'));
