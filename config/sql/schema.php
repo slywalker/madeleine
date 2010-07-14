@@ -23,6 +23,7 @@ class MadeleineSchema extends CakeSchema {
 	var $templates = array(
 		'id' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 36, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => false, 'default' => NULL),
+		'subject' => array('type' => 'string', 'null' => false, 'default' => NULL),
 		'body' => array('type' => 'text', 'null' => false, 'default' => NULL),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => NULL, 'key' => 'index'),
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'created' => array('column' => 'created', 'unique' => 0), 'created_2' => array('column' => 'created', 'unique' => 0))
