@@ -9,7 +9,10 @@ class Post extends AppModel {
 	);
 
 	public function beforeValidate() {
-		if ($this->data['Post']['body']) {
+		if (isset($this->data['Post']['subject'])) {
+			$this->data['Post']['subject'] = mb_convert_kana($this->data['Post']['subject'], 'KV');
+		}
+		if (isset($this->data['Post']['body'])) {
 			$this->data['Post']['body'] = mb_convert_kana($this->data['Post']['body'], 'KV');
 		}
 	}

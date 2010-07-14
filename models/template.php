@@ -9,7 +9,10 @@ class Template extends AppModel {
 	);
 
 	public function beforeValidate() {
-		if ($this->data['Template']['body']) {
+		if (isset($this->data['Template']['subject'])) {
+			$this->data['Template']['subject'] = mb_convert_kana($this->data['Template']['subject'], 'KV');
+		}
+		if (isset($this->data['Template']['body'])) {
 			$this->data['Template']['body'] = mb_convert_kana($this->data['Template']['body'], 'KV');
 		}
 	}
