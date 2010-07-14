@@ -7,6 +7,7 @@
 			'legend' => __('Edit Template', true),
 			'id',
 			'name' => array('label' => __('Template Name', true)),
+			'subject' => array('label' => __('Subject', true)),
 			'body' => array('label' => __('Body', true), 'rows' => 20),
 		));
 		echo $form->end(__('Submit', true));

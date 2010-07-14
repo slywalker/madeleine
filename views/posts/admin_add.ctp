@@ -11,8 +11,11 @@ $(function(){
 		if (value) {
 			ret = confirm('$confirmMessage');
 			if (ret == true){
-				$.get('$url/' + value, function(html) {
-					$('textarea#PostBody').append(html);
+				$.get('$url/' + value + '/subject', function(html) {
+					$('#PostSubject').val(html);
+				});
+				$.get('$url/' + value + '/body', function(html) {
+					$('#PostBody').val(html);
 				});
 			}
 		}

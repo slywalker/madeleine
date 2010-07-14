@@ -62,11 +62,11 @@ class TemplatesController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 
-	public function admin_get_ajax($id = null) {
+	public function admin_get_ajax($id = null, $field = 'body') {
 		if (!$this->RequestHandler->isAjax()) {
 			$this->cakeError('error404');
 		}
-		if (!$id || !$body = $this->Template->field('body', array('Template.id' => $id))) {
+		if (!$id || !$body = $this->Template->field($field, array('Template.id' => $id))) {
 			$this->cakeError('error404');
 		}
 		$this->set(compact('body'));
